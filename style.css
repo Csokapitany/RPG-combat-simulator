@@ -1,0 +1,176 @@
+
+h1 {color: blue;}
+div {color: brown;}
+h3{color: chocolate;}
+form {color: rgb(0, 0, 0);}
+#t { color: brown;}
+
+body{ 
+
+    color: blue;
+    background: antiquewhite;
+    margin: auto 20px;
+    padding: auto 10px;
+    height: auto;
+    text-align: center;
+    margin-bottom: 80px;
+    line-height: 9 px;
+    border: 3px, color red, solid;
+
+
+
+}
+section{ padding: auto;
+    background-color: rgb(143, 235, 131);
+    font-style: italic;
+
+/* 
+}
+<aside>
+body {
+    color:                  #FFFFFF;
+    background:             #000;
+    font-family:            Arial;
+}
+
+div.result {
+    background: #251501;
+    background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #3f2217), color-stop(100%, #251501)), #251501;
+    background: -webkit-linear-gradient(#3f2217, #251501), #251501;
+    background: -moz-linear-gradient(#3f2217, #251501), #251501;
+    background: -o-linear-gradient(#3f2217, #251501), #251501;
+    background: linear-gradient(#3f2217, #251501), #251501;
+    width:                  50%;
+    float:                  left;
+    padding:                0;
+    margin:                 15px 0 0 0;
+    border:                 1px solid #777777;
+    border-width:           1px 0 1px 0;
+}
+
+div.result div.content {
+    background-color:       #965c16;
+    font-weight:            bold;
+    font-size:              30pt;
+    padding:                35px 0 20px 0;
+    text-align:             center;
+    width:                  100%;
+    height:                 65px;
+}
+div.result div.top {
+    background: #251501;
+    background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #3f2217), color-stop(100%, #251501)), #251501;
+    background: -webkit-linear-gradient(#3f2217, #251501), #251501;
+    background: -moz-linear-gradient(#3f2217, #251501), #251501;
+    background: -o-linear-gradient(#3f2217, #251501), #251501;
+    background: linear-gradient(#3f2217, #251501), #251501;
+    font-weight:            bold;
+    font-size:              8pt;
+    padding:                5px 0px 5px 0px;
+    text-align:             center;
+    border:                 1px solid #777777;
+    border-width:           0 0 1px 0;
+    width:                  100%;
+}
+
+div.prev_results {
+    background: #251501;
+    background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #3f2217), color-stop(100%, #251501)), #251501;
+    background: -webkit-linear-gradient(#3f2217, #251501), #251501;
+    background: -moz-linear-gradient(#3f2217, #251501), #251501;
+    background: -o-linear-gradient(#3f2217, #251501), #251501;
+    background: linear-gradient(#3f2217, #251501), #251501;
+    width:                  50%;
+    float:                  left;
+    margin:                 15px 0 0 0;
+    border:                 1px solid #777777;
+    border-width:           1px 0px 1px 0px;      
+}
+
+div.prev_results div.content {
+    font-weight:            bold;
+    font-size:              10pt;
+    padding:                20px 0 20px 0;
+    text-align:             center;
+    background-color:       #251501;
+    width:                  100%;
+    height:                 80px;
+}
+div.prev_results div.top {
+    background: #251501;
+    background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #3f2217), color-stop(100%, #251501)), #251501;
+    background: -webkit-linear-gradient(#3f2217, #251501), #251501;
+    background: -moz-linear-gradient(#3f2217, #251501), #251501;
+    background: -o-linear-gradient(#3f2217, #251501), #251501;
+    background: linear-gradient(#3f2217, #251501), #251501;
+    font-weight:            bold;
+    font-size:              8pt;
+    padding:                5px 0 5px 0;
+    text-align:             center;
+    border:                 1px solid #777777;
+    border-width:           0 0 1px 0;
+    width:                  100%;
+}
+
+table.dices {
+    width:                  100%;
+    border-collapse:        collapse;
+    background-color:       #1e0405;
+    border:                 1px solid #777777;
+    border-width:           0 0 1px 0;
+    background: #251501;
+    background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #3f2217), color-stop(100%, #251501)), #251501;
+    background: -webkit-linear-gradient(#3f2217, #251501), #251501;
+    background: -moz-linear-gradient(#3f2217, #251501), #251501;
+    background: -o-linear-gradient(#3f2217, #251501), #251501;
+    background: linear-gradient(#3f2217, #251501), #251501;
+    margin-bottom:          0px;
+}
+
+table.dices td{
+    padding:                3px;
+    font-size:              10pt;
+    color:                  #cccccc;
+    text-align:             left;
+    vertical-align:         middle;
+}
+
+table.dices td.col1{
+    font-size:              8pt;
+    color:                  #FFFFFF;
+    font-weight:            bold;
+    width:                  50px;
+    text-align:             left;
+}
+
+table.dices td.col2{
+    padding-left:           30px;        
+}
+
+table.dices td.col3{
+    width:                  100px;
+}
+
+select {
+    font-size:              11pt;
+    border-color:           #AAAAAA;
+}
+
+a {
+    display:                block;
+    height:                 47px;
+    width:                  55px;
+    text-decoration:        none;
+}
+
+a.dice:hover {
+    background:             transparent url(../../styles/basic/images/classic/dice.png) no-repeat -55px 0;
+}
+
+a.dice, a.dice:active {
+    background:             transparent url(../../styles/basic/images/classic/dice.png) no-repeat 0 0;
+}
+
+
+
+</aside> */

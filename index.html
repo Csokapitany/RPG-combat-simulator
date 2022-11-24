@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css"> -->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <title>RPG combat simulator</title>
+    <meta
+      name="keywords"
+      content="rpg, dice, simulator, combat, d100, d10, d6, play"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Welcome on the RPG dice roll simulator</h1>
+     <hr />
+      <div>
+        <h2>The main simulator will be for dice roll rolling</h2>
+        <a
+          href="http://g.co/kgs/HjGYaB"
+          target="_blank"
+          rel="noopener noreferrer">
+          
+        Itt <span id="t">tudsz</span>  dobni egyszerueket</a>
+        <br />
+        <hr>
+        <a
+          href="https://dreonar.hu/pages/kockadobo/kockadobo.php#"
+          target="_blank"
+          >Magus kockadobo</a
+        >
+        <button type="submit" id='D6' name="gomb" > Dobas6</button>
+        <p id='kiir'></p>  
+        <br>
+        <p><button type="submit" onclick="K6 (roll)">K6</button>
+          <output id="#K6out"> K6 random </output> result</p>  
+        <p><button type="submit" onclick="roll(K10)">K10 dobas</button>
+          <output id="#K10out"> K10 random </output> result</p>
+        <p><button type="submit" onclick="roll(K100)" id="#k100">K100 dobas</button>
+          <output id="#K100out"> K100 random </output> result </p>
+        <hr />
+         </div>
+    </header>
+    <section class="Bevitel">
+      <h2>Here u can upload your Character</h2>
+    <hr />
+    <!-- "https://formspree.io/f/xnqrgqer" -->
+    <div>
+
+      <form id="KarakterFeltotlto"> 
+      <label for="charName">Char name:</label>
+      <input type="text" name="charName" id="charName">
+      <input type="submit" value="Add Charname" class="btn">
+ 
+     
+
+      <p>Alap ertek 1-999 ig adhatsz meg szamokat</p>
+      <label for="">KezdoAlap</label>
+      <input
+        type="number"
+        name="KezdoAlap"
+        id="KezdoAlap"
+        min="1"
+        max="999"
+        size="3"
+      />
+
+      <label for="">TamadoAlap</label>
+      <input
+        type="number"
+        name="TamadoAlap"
+        id="TamadoAlap"
+        min="1"
+        max="999"
+        size="3"
+      />
+
+      <label for="">VedoAlap</label>
+      <input
+        type="number"
+        name="VedoAlap"
+        id="VedoAlap"
+        min="1"
+        max="999"
+        size="3"
+      />
+
+      <label for="">CelzoAlap</label>
+      <input
+        type="number"
+        name="CelzoAlap"
+        id="CelzoAlap"
+        min="1"
+        max="999"
+        size="3"
+            />
+      <button type="submit" onclick="character">Character upload</button>
+            <br />
+      <hr />
+      <br />
+      <h4>Fegyverek feltoltese Jobb kez:</h4>
+      <label for="">Fegyver1Neve</label>
+      <input type="text" name="Fegyver1Neve" id="Fegyver1Neve" />
+
+      <label for="">Sebzes1</label>
+      <input type="text" name="Sebzes1" id="sebzes1" size="6" />
+
+      <label for="">SebzesMod</label>
+      <input type="number" name="SebzesMod" id="SebzesMod" min="1" max="20" size="2"/>
+      <br>
+<p>Add meg a fegyvered ertekeit 1-999</p>
+      <label for="">Kezdo1</label>
+      <input
+        type="number"
+        name="Kezdo1"
+        id="Kezdo1"
+        min="1"
+        max="999"
+        size="3"
+      />
+
+      <label for="">Tamado1</label>
+      <input
+        type="number"
+        name="Tamado1"
+        id="Tamado1"
+        min="1"
+        max="999"
+        size="3"
+      />
+
+      <label for="">Vedo1</label>
+      <input type="number" name="Vedo1" id="Vedo1" min="1" max="999" size="3" />
+
+      <label for="">Celzo1</label>
+      <input
+        type="number"
+        name="Celzo1"
+        id="Celzo1"
+        min="1"
+        max="999"
+        size="3"
+      />
+
+      <label for="">Tamadas/kor1</label>
+      <input
+        type="number"
+        name="Tamadaskor1"
+        id="Tamadaskor1"
+        min="1"
+        max="22"
+        size="2"/>
+      <hr>
+      <button type="submit" id="FeltoltoGomb" onclick="na(valtozo)">Feltotes</button>
+   <br>
+    </form>
+    </div>
+<br>
+    <hr />
+    <div class="Feltoltes" id="#upLoad">
+      <ul class="CharList">Itt lesznek a karakterek </ul>
+      <h3 class="KarakterGyujtemeny">Karakterek</h3>
+      <li class="KariLista">Feltoltott Karakterek Listaja</li>
+    
+    </div>
+  
+<br>
+<footer>Made by George Kolozsi</footer>
+
+<script
+src="https://code.jquery.com/jquery-3.6.1.js"
+integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI="
+crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+<script src="app.js"></script> 
+
+  </body>
+</html>
